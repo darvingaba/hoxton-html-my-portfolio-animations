@@ -9,12 +9,38 @@
 img{
     width: 100%;
 }
+.sun{
+    display: grid;
+    place-items: center;
+    position: relative;
+    /* top: -2rem; */
+    left: -3rem;
+    max-width: 260px;
+    animation: spin infinite linear 3s;
+    /* z-index: 2; */
+    transition: all infinite;
+}
+.sun p{
+    color: #ede6e28d;
+}
+.sun:hover{
+    left: 10rem;
+}
+.sun:hover p{
+    display: none;
+}
+.sun:hover::before{
+    content: "Let me go!!!";
+    color: #ede6e28d;
+}
+
 
 .container{
     display: grid;
     grid-auto-flow: row;
     background-color: #d71a5fb3;
     background-size: 100% 100%;
+    position: relative;
 }
 a{
     text-decoration: none;
@@ -24,13 +50,14 @@ a{
 header{
     display: grid;
     grid-auto-flow: column;
-    margin: 1rem 3rem;
+    margin: 0rem 3rem;
     padding: 1rem;
     align-items: center;
     background-color: #00090e5e;
     border-radius: 12px;
     position: relative;
     animation: dropdown 1.5s linear;
+    z-index: 10;
 }
 header .logo{
     margin-left: 2rem;
@@ -51,6 +78,9 @@ header a{
 header a:hover{
     color: #d3ff35;
 }
+header a:active{
+    color: rgb(255, 0, 0);
+}
 header .nav-logo{
     width: 1.2rem;
 }
@@ -65,6 +95,7 @@ header .nav-logo{
     gap: 1rem;
     position: relative;
     animation: slide-from-left 1.5s;
+    margin-top: 1rem;
 }
 .socials svg{
     height: 28px;
@@ -205,7 +236,7 @@ main .laptop{
     transition: 1s;
 }
 .skills-list:hover{
-    transform: scale(1.05);
+    transform: scale(1.15);
 }
 .js , .react, .html, .css {
     display: grid;
@@ -289,5 +320,13 @@ main .laptop{
     }
     100%{
         transform: scale(1);
+    }
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
     }
 }
