@@ -132,6 +132,10 @@ main .laptop{
     grid-auto-flow: row;
     gap: 10px;
     border-radius: 12px;
+    transition: 0.6s;
+}
+.project1:hover, .project2:hover,.project3:hover{
+    transform: scale(1.05);
 }
 
 .projects p{
@@ -168,6 +172,11 @@ main .laptop{
     background-color: antiquewhite;
     background-repeat: no-repeat;
     padding: 1rem 4rem;
+    position: relative;
+    transition: 0.6s;
+}
+.exp:hover{
+    transform: scale(1.05);
 }
 .experience .labels{
     display: grid;
@@ -193,6 +202,10 @@ main .laptop{
     display: grid;
     grid-auto-flow: column;
     gap: 1rem;
+    transition: 1s;
+}
+.skills-list:hover{
+    transform: scale(1.05);
 }
 .js , .react, .html, .css {
     display: grid;
