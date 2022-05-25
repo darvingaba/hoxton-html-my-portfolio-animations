@@ -13,11 +13,9 @@ img{
     display: grid;
     place-items: center;
     position: relative;
-    /* top: -2rem; */
     left: -3rem;
     max-width: 260px;
     animation: spin infinite linear 3s;
-    /* z-index: 2; */
     transition: all infinite;
 }
 .sun p{
